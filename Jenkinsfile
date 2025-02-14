@@ -9,7 +9,7 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 script {
-                    sh 'pip install -r requirements.txt'
+                    bat 'pip install -r requirements.txt'
                 }
             }
         }
@@ -17,7 +17,7 @@ pipeline {
         stage('Run tests') {
             steps {
                 script {
-                    sh 'pytest tests_spotify.py'
+                    bat 'pytest tests_spotify.py'
                 }
             }
         }
@@ -25,7 +25,7 @@ pipeline {
         stage('Evaluate code quality') {
             steps {
                 script {
-                    sh 'python evaluar_calidad.py'
+                    bat 'python evaluar_calidad.py'
                 }
             }
         }
