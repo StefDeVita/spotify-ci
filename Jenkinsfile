@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         PYTHON_ENV = 'python3.12'
+        GENIUS_ACCESS_TOKEN = 'your_token_value_here'
     }
 
     stages {
