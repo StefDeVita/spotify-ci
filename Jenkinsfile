@@ -26,7 +26,7 @@ pipeline {
         stage('Evaluate code quality') {
             steps {
                 script {
-                    bat 'python evaluar_calidad.py'
+                    bat 'python metricas_calidad.py'
                 }
             }
         }
