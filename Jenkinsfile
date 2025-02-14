@@ -17,7 +17,7 @@ pipeline {
         stage('Run tests') {
             steps {
                 script {
-                    bat 'pytest tests_spotify.py'
+                    bat 'python -m pytest tests_spotify.py'
                 }
             }
         }
