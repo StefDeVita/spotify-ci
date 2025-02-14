@@ -1,0 +1,38 @@
+# Ignorar entornos virtuales
+venv/
+.env/
+
+# Archivos de dependencias
+*.egg-info/
+*.egg
+*.tar.gz
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+
+# Archivos generados por Jenkins (por ejemplo, logs y directorios de trabajo)
+*.log
+jenkins/
+
+# Archivos de cobertura de pruebas
+.coverage
+coverage.xml
+*.cover
+
+# Archivos de pylint (si se generan)
+pylint_report.txt
+
+# Radon report files
+radon_report.txt
+
+# Ignorar cualquier archivo sensible, como claves API (es importante mantener el .env fuera del repositorio)
+*.env
+
+# Archivos temporales de sistemas operativos
+.DS_Store
+Thumbs.db
