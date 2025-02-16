@@ -1,5 +1,9 @@
 pipeline {
     agent any
+	
+	triggers {
+        githubPush()
+    }
 
     environment {
         PYTHON_ENV = 'python3.12'
@@ -7,6 +11,12 @@ pipeline {
     }
 
     stages {
+		stage('Checkout') {
+            steps {
+                git branch: 'master', url: 'https://github.com/StefDeVita/spotify-ci.git'
+            }
+        }
+
         stage('Install dependencies') {
             steps {
                 script {
